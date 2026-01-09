@@ -75,9 +75,35 @@ If Min and Max are equal to zero, the function is deactivated (the baud rate doe
 
 **Stop on error** - checking this box will pause the entire test in case of a transmission error.
 
-**Start test** - will start transmitting the selected test file according to the settings above. The file will be sent over and over.
-<u>If the test is stopped in case of an error, pressing this button
+**Start test** - starts transferring the selected test file according to the settings above. The file will be sent over and over again.
+<u>If the test is stopped due to an error, pressing this button will allow the transfer to continue.</u>
 
+**Stop test** - ends the transfer and the entire test.
+
+**Clear** - clears the window with messages about the test progress and all statistics.
+
+## Statistics
+is displayed at the bottom of the window. It is updated continuously during the test (approximately every half a second).
+
+**Cycle** - counter of test file sending cycles. The cycle is incremented after the test file is completely sent.
+
+**Errors** - error counter (for all transmission speeds)
+
+**Block Size** - current size of the transmitted block. When generating block sizes randomly, the last value is always displayed.
+
+**Baudrate** - current transmission speed.
+
+**TxCharTime** - calculated time based on the current transmission speed with the addition of the time gap between characters (decision timeout value).
+<u>Attention! It is calculated for 8-byte transmission without parity with one stop bit.</u>
+
+**TxChar_Delay** - Time gap between transmitted characters in milliseconds.
+
+**RxBlockTimeout** - calculated timeout for the current block size.
+
+## Warning
+I am not a python programmer, so the structure of the script is amateur and ugly - AI helped me create the skeleton. The translation is not finished and some texts could be clearer or different.
+Nevertheless, the script helped me and that is why it is here. Maybe it will help others.
+If you want, edit it, rewrite it, add to it....
 
 
 
